@@ -1,0 +1,28 @@
+Main Execution
+
+1.	Import the necessary modules: random and Counter from the collections module.
+2. 	Define a string Words containing a list of fruit names.
+3.	Split the Words string into a list of words.
+4.	Randomly select a word from the Words list and store it in the word variable.
+5.	Print a message asking the user to guess the word, which is the name of a fruit.
+
+Game Loop
+
+1.	Initialize the display of the hidden word by printing underscores for each letter in the word.
+2.	Initialize the game variables:
+		playing: a flag to control the game loop
+		letterguessed: a set to store the letters guessed by the user
+		chances: the number of chances the user has to guess the word (set to the length of the word plus 2)
+		correct: the number of correct letters guessed
+		flag: a flag to indicate if the user has won the game
+3.	Start the game loop:
+		Decrement the chances variable by 1.
+		Prompt the user to enter a letter to guess.
+		Validate the user's input:
+			Ensure the input is a single alphabetic character.
+			Check if the user has already guessed the letter.
+		If the input is valid, add the letter to the letterguessed set.
+		Display the current state of the word, revealing the correctly guessed letters and keeping the remaining letters hidden.
+		Check if all the letters in the word have been guessed (i.e., the letterguessed set contains all the letters in the word).
+			If all letters have been guessed, print a congratulatory message and set the flag variable to True to exit the game loop.
+4.	If the user has run out of chances and the word has not been guessed, print a message indicating that the user has lost and display the correct word.
