@@ -33,5 +33,5 @@
 7.	End of Loop:
 		The loop continues to the next iteration, starting again with user input.
 8.	Program Conclusion:
-		After exiting the loop (when the user types "q"), display the total number of wins for both the user and the computer with a message like "You Won [userwins] times. The 			Computer Won [computerwins] times."
+		After exiting the loop (when the user types "q"), display the total number of wins for both 		the user and the computer with a message like "You Won [userwins] times. The Computer Won 		[computerwins] times."
 		Print a final goodbye message.
