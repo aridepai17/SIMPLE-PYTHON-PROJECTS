@@ -1,0 +1,37 @@
+1.	Initialization:
+		Initialize two counters, userwins and computerwins, to 0. These will track the number of wins for the user and the computer, respectively.
+		Create a list options containing the possible choices: "rock", "paper", "scissors".
+
+2.	Main Loop:
+		Start a while True loop. This loop will continue running until the user decides to quit.
+
+3.	Get User Input:
+		Prompt the user for input with a message like "Type Rock/Paper/Scissors or Q to Quit".
+		Convert the input to lowercase to handle case variations (e.g., "Rock" or "ROCK").
+		If the user types "q", break the loop and proceed to the end of the program.
+
+4.	Validate User Input:
+		If the user input is not one of "rock", "paper", or "scissors", continue to the next iteration of the loop without further processing.
+
+5.	Generate Computer Guess:
+		Use random.randint(0, 2) to generate a random index from 0 to 2.
+		Use this index to select the computer's guess from the options list.
+		Display the computer's guess to the user with a message like "Computer guessed [guess]."
+
+6.	Determine Winner:
+		Check if the user input matches the computer guess (draw situation):
+			If true, print "It's a Draw!" and proceed to the next iteration of the loop.
+
+		Check for user wins:
+			If the user chose "rock" and the computer chose "scissors", or
+			If the user chose "paper" and the computer chose "rock", or
+			If the user chose "scissors" and the computer chose "paper",
+			Then, increment userwins by 1 and print "You Won!".
+		If none of the above conditions are met, the computer wins:
+			Increment computerwins by 1 and print "You Lost!".
+
+7.	End of Loop:
+		The loop continues to the next iteration, starting again with user input.
+8.	Program Conclusion:
+		After exiting the loop (when the user types "q"), display the total number of wins for both the user and the computer with a message like "You Won [userwins] times. The 			Computer Won [computerwins] times."
+		Print a final goodbye message.
