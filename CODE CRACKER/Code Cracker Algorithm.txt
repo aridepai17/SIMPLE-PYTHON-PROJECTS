@@ -1,0 +1,53 @@
+Algorithm
+
+1.	Initialization:
+		Define constants for the game:
+			COLORS: A list of valid color choices (["R", "G", "B", "W", "Y", "O"]).
+			TRIES: The maximum number of attempts allowed for the game (10).
+			CODELENGTH: The length of the secret code to guess (4).
+
+2.	Code Generation:
+		Create a function codegenerate() to generate a random secret code:
+			Initialize an empty list code.
+			Use a loop to select CODELENGTH random colors from COLORS.
+			Append the selected color to code.
+		Return the generated code.
+
+3.	User Input (Guessing):
+		Create a function guesscode() to obtain a valid guess from the player:
+			Loop until a valid guess is obtained:
+				Prompt the user to input a guess of CODELENGTH colors (separated by spaces).
+				Convert the guess to uppercase and split it into a list.
+				Check if the guess length is equal to CODELENGTH:
+					If not, display an error message and ask again.
+				Validate each color in the guess:
+					If any color is invalid, display an error message and break to re-prompt.
+				If the guess is valid, return it.
+
+4.	Code Checking:
+		Create a function checkcode(guess, realcode) to check the guess against the secret code:
+			Initialize colorcounts, a dictionary to count the occurrences of each color in realcode.
+			Initialize correctpos to track the number of exact matches.
+			Initialize incorrectpos to track the number of correct colors in the wrong position.
+			Loop through realcode to populate colorcounts.
+			Loop through guess and realcode to count exact matches (correctpos):
+				If a color in guess matches the corresponding color in realcode, increment correctpos and decrement the corresponding count in colorcounts.
+			Loop through guess and realcode again to count colors in the wrong position (incorrectpos):
+				If a color in guess is in colorcounts and has a positive count but is not an exact match, increment incorrectpos and decrement the corresponding count in colorcounts.
+		Return correctpos and incorrectpos.
+
+5.	Game Logic:
+		Create a function game() to run the main game loop:
+			Display a welcome message and the valid colors.
+			Generate the secret code using codegenerate().
+			Loop through the number of attempts allowed (TRIES):
+				Get the user's guess using guesscode().
+				Check the guess against the secret code using checkcode().
+				If correctpos equals CODELENGTH, the user has guessed the code correctly:
+					Display a congratulatory message with the number of attempts used.
+					Break the loop.
+				Otherwise, provide feedback with the number of correct and incorrect positions.
+			If the loop completes without a correct guess, inform the player they've run out of tries and display the correct code.
+
+6.	Execution:
+		If the script is run as the main program (using if __name__ == "__main__"), call the game() function to start the game.
