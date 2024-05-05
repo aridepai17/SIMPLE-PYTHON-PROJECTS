@@ -1,0 +1,36 @@
+ALGORITHM
+
+1.	Define the Dice Roll Function
+		Create a function roll() that generates a random number between 1 and 6 (representing a dice roll).
+
+2.	Get the Number of Players
+		Prompt the user to enter the number of players (from 2 to 4).
+		If the input is a number and within the valid range, continue. Otherwise, prompt again.
+
+3.	Initialize the Game Parameters
+		Define the maxscore as 50, which is the target score to win the game.
+		Create a list playerscores to hold the cumulative scores for each player, initialized to zero.
+
+4.	Main Game Loop
+		The game loop continues until at least one player reaches or exceeds the maxscore.
+
+5.	Player Turns
+		Loop through each player to give them a turn to roll the dice.
+		Print a message indicating the start of the player's turn.
+		Initialize currentscore to zero to track the score for the current turn.
+
+6.	Player's Roll Loop
+		Ask if the player would like to roll the dice (input 'y' to roll).
+		If the response is not 'y', add currentscore to the player's total score, print their total score, and end their turn.
+		If the response is 'y', roll the dice and check the result.
+		If the dice roll is 1, print a message that the turn is over, reset currentscore to zero, update the player's total score with currentscore, and break the loop to end the turn.
+		If the dice roll is not 1, add the roll value to currentscore and print the current score for this turn.
+
+7.	Update Player's Total Score
+		After each turn, add currentscore to the player's total score in playerscores.
+		Print the updated total score for the current player.
+		Check if the player's total score has reached or exceeded maxscore. If so, break the game loop to end the game.
+
+8.	Determine the Winner
+		After exiting the game loop, find the player with the highest score.
+		Announce the winner, displaying the winner's player number and final score.
