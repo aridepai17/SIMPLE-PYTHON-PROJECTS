@@ -1,0 +1,37 @@
+1.	Define Constants and Variables
+		OPERATORS: List of available operators for arithmetic problems (+, -, *).
+		MINOPERAND, MAXOPERAND: Minimum and maximum bounds for operand values.
+		TOTALPROBLEMS: Total number of problems the user will solve.
+		wrong: Counter for incorrect guesses, initialized to 0.
+
+2.	Generate an Arithmetic Problem
+		Function generateproblem():
+		Randomly generate two operands (left and right) between MINOPERAND and MAXOPERAND.
+		Randomly select an operator from OPERATORS.
+		Create a string expression expr from these operands and the operator.
+		Use eval(expr) to calculate the correct answer answer.
+		Return the expression and the answer.
+
+3.	Prepare the User for the Start
+		Prompt the user to press Enter to start.
+		Display a line to indicate the beginning of the challenge.
+
+4.	Start the Timer
+		Use time.time() to record the start time (starttime).
+
+5.	Loop Through Problems
+		Loop (from i = 0 to TOTALPROBLEMS - 1):
+			Generate a problem using generateproblem().
+			Get the expression (expr) and the correct answer (answer).
+			Enter a while loop to prompt the user for their answer.
+			While loop:
+				Prompt the user with a formatted string that includes the problem number, expression, and asks for the user's guess.
+				If the user's guess matches the correct answer (guess == str(answer)), break the loop and move on to the next problem.
+				If the guess is incorrect, increment the wrong counter and continue asking for the correct answer.
+
+6.	Stop the Timer
+		Record the end time (endtime) using time.time().
+
+7.	Calculate and Display Results
+		Calculate the total time (totaltime) as the difference between endtime and starttime. Round to two decimal places.
+		Display a message indicating successful completion, along with the total time taken.
