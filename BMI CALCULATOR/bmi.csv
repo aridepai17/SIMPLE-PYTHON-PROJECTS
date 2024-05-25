@@ -1,0 +1,9 @@
+ranges, condition
+<18.5, underweight
+18.5 - 25, normal
+25 - 30, overweight
+30 - 35, obese 
+35 - 40, clinically obese
+40<, morbidly obese
+
+
