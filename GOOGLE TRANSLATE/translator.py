@@ -18,7 +18,6 @@ for options in languageoptions:
 translatingfrom = input("Enter the language you want to translate from: ").lower()
 word = input("Enter the text you want to translate: ").lower()
 translatingto = input("Enter the language you want to translate to: ").lower()
-
 try:
     if translatingfrom and translatingto in languagecodes or languagenames:
         translation = translator.translate(word, src = translatingfrom, dest = translatingto).text
