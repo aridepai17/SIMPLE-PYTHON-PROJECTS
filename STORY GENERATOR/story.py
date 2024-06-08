@@ -1,0 +1,128 @@
+import random
+
+def generatestory():   
+    characters = [
+        "A fearless astronaut",
+        "A wise sage",
+        "A charming prince",
+        "A powerful politician",
+        "A stunning beauty",
+        "A mysterious stranger",
+        "A rebellious teenager",
+        "An enigmatic archaeologist",
+        "A brilliant scientist",
+        "A mischievous wizard",
+        "A cunning detective",
+        "A brave warrior",
+        "A kind-hearted nurse",
+        "A talented musician",
+        "A skilled chef",
+        "A quirky inventor",
+        "A passionate artist",
+        "A dedicated teacher",
+        "A friendly neighbor",
+        "A loyal pet",
+        "A fearless explorer",
+        "A curious scientist",
+        "A wise old sage",
+        "A mischievous elf",
+        "A brave knight",
+    ]
+    
+    settings = [
+        "in a desolate wasteland",
+        "in an enchanted forest",
+        "in a mysterious city",
+        "in a magical castle",
+        "in a dark cave",
+        "in a serene beach",
+        "in a bustling marketplace",
+        "in a tranquil garden",
+        "in a majestic mountain",
+        "in a hidden island",
+        "in a futuristic city",
+        "in a haunted mansion",
+        "in a snowy wilderness",
+        "in a bustling metropolis",
+        "in a peaceful village",
+        "in a time-traveling spaceship",
+        "in a parallel universe",
+        "in a post-apocalyptic world",
+        "in a fairytale kingdom",
+        "in a vast desert",
+        "in a lush rainforest",
+        "in a magical underwater kingdom",
+        "in a floating sky city",
+        "in a secret underground lair",
+        "in a dark space station",
+    ]
+    
+    plots = [
+        "quest to find a lost treasure",
+        "battle against an ancient evil",
+        "forbidden love affair",
+        "struggle for power and control",
+        "journey to discover one's true identity",
+        "race against time to save the world",
+        "fight for justice and equality",
+        "tale of redemption and forgiveness",
+        "battle between good and evil",
+        "search for a mythical creature",
+        "mission to uncover a conspiracy",
+        "story of friendship and loyalty",
+        "quest for revenge",
+        "struggle to overcome personal demons",
+        "battle against nature's forces",
+        "tale of survival in a harsh environment",
+        "journey to find inner peace",
+        "fight against societal norms",
+        "A story of self-discovery and growth",
+        "quest to break a curse",
+        "battle against supernatural beings",
+        "search for a long-lost artifact",
+        "struggle to find meaning in life",
+        "mission to protect a secret",
+        "story of sacrifice and selflessness",
+        "fight for freedom and independence",
+    ]
+    
+    twists = [
+        "But they discover a shocking family secret",
+        "But they realize they are the chosen one",
+        "But they uncover a hidden betrayal",
+        "But they encounter a parallel universe",
+        "But they learn they have a long-lost sibling",
+        "But they find out they have a special power",
+        "But they stumble upon a time-traveling device",
+        "But they encounter a mythical creature",
+        "But they discover a hidden treasure",
+        "But they encounter a powerful ancient artifact",
+        "But they uncover a government conspiracy",
+        "But they meet a wise mentor",
+        "But they find out they are part of a prophecy",
+        "But they encounter a dangerous cult",
+        "But they discover a secret society",
+        "But they encounter a supernatural being",
+        "But they learn they are living in a simulation",
+        "But they find out they are not who they thought they were",
+        "But they encounter a group of rebels",
+        "But they discover a hidden world within our own",
+        "But they encounter a time loop",
+        "But they learn they have a twin sibling",
+        "But they discover a hidden portal to another dimension",
+        "But they encounter a powerful enemy",
+        "But they find out they are the last of their kind",
+        "But they uncover a dark family secret",
+        "But they encounter a mysterious prophecy",
+        "But they learn they have a doppelganger",
+    ]
+    
+    character = random.choice(characters)
+    setting = random.choice(settings)
+    plot = random.choice(plots)
+    twist = random.choice(twists)
+    
+    story = f"Once upon a time, {character} {setting} {plot}.{twist}."
+    return story
+    
+print(generatestory())
