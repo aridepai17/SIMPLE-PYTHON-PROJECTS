@@ -4,7 +4,7 @@ from collections import Counter
 # List of words (fruit names)
 Words = '''apple banana mango strawberry orange grape pineapple apricot lemon coconut Watermelon
 cherry papaya berry peach litchi muskmelon plum kiwi avocado fig pomegranate pear 
-dragonfruit custard jackfruit watermelon tangerine gooseberry mosambi'''
+dragonfruit jackfruit watermelon tangerine gooseberry mosambi'''
 
 # Split words into a list and select a random word
 Words = Words.split()
