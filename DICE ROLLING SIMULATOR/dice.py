@@ -2,7 +2,8 @@ import random
 def rolldice():
     number = random.randint(1, 6)
     print("You rolled: ", number)
-    
+
+
 def main():
     while True:
         print("1. Roll the dice")
